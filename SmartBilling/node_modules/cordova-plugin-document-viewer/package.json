@@ -1,0 +1,67 @@
+{
+  "_from": "cordova-plugin-document-viewer@0.9.11",
+  "_id": "cordova-plugin-document-viewer@0.9.11",
+  "_inBundle": false,
+  "_integrity": "sha512-t0XJAAz3IAP2r56VSjIOVIg9XsnQg+48eohqCoGEiZtgpVat+1rhSUXNu3FSFHGh7nV5bG1q6QmNLAtmuNyY7g==",
+  "_location": "/cordova-plugin-document-viewer",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-document-viewer@0.9.11",
+    "name": "cordova-plugin-document-viewer",
+    "escapedName": "cordova-plugin-document-viewer",
+    "rawSpec": "0.9.11",
+    "saveSpec": null,
+    "fetchSpec": "0.9.11"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-document-viewer/-/cordova-plugin-document-viewer-0.9.11.tgz",
+  "_shasum": "2103d487f56c1eff9d2948380efef4008182d6bf",
+  "_spec": "cordova-plugin-document-viewer@0.9.11",
+  "_where": "/home/am-n2/Ionic/SmartBilling",
+  "author": {
+    "name": "Felix Schauerte"
+  },
+  "bugs": {
+    "url": "https://github.com/sitewaerts/cordova-plugin-document-viewer/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-document-viewer",
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "PDF Document viewer cordova plugin for iOS, Android and Windows 8.1 + 10",
+  "engines": {
+    "cordovaDependencies": {
+      "0.9.11": {
+        "cordova": ">=3.7.0",
+        "cordova-windows": ">=4.4.0"
+      }
+    }
+  },
+  "homepage": "https://github.com/sitewaerts/cordova-plugin-document-viewer#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-windows",
+    "pdf"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-document-viewer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitewaerts/cordova-plugin-document-viewer.git"
+  },
+  "version": "0.9.11"
+}

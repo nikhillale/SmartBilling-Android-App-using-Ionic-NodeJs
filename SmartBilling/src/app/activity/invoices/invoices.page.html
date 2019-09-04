@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-card>
+<ion-toolbar>
+  <ion-buttons>
+    <ion-menu-button></ion-menu-button>
+    <ion-title>
+      Invoice
+    </ion-title>
+  </ion-buttons>
+</ion-toolbar>
+</ion-card>
+</ion-header>
+
+<ion-content >
+  <ion-card *ngFor="let invNO of invoiceNo; index as i" >
+    <ion-item>
+      <ion-icon size="18"  name="clipboard"  slot='start'></ion-icon>
+      <ion-label>{{invNO}}</ion-label>
+      <ion-icon name="options" (click)="onOptions(i)" slot="end"></ion-icon>
+    </ion-item> 
+</ion-card>  
+</ion-content>

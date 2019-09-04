@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Delete
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let item of product; index as i">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="2" align-self-start>{{i+1}}</ion-col>
+              <ion-col>{{item.brand}}</ion-col>
+              <ion-col>{{item.name}}</ion-col>
+              <ion-col>{{item.price}} &nbsp;&#8377;</ion-col>
+              <ion-col><ion-icon name="trash" color='danger' size='large' (click)="onClick(item._id)"></ion-icon></ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-item>
+    </ion-list>
+   
+  </ion-content>
+  

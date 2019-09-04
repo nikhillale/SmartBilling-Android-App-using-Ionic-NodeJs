@@ -1,0 +1,1 @@
+const n=()=>{const n=window.TapticEngine;n&&n.selection()},e=()=>{const n=window.TapticEngine;n&&n.gestureSelectionStart()},t=()=>{const n=window.TapticEngine;n&&n.gestureSelectionChanged()},i=()=>{const n=window.TapticEngine;n&&n.gestureSelectionEnd()};export{e as a,t as b,i as c,n as h};

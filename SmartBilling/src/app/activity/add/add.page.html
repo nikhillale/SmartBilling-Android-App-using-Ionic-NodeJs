@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Add roduct
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+<form [formGroup]="productForm">
+    <ion-card>
+      <ion-item >
+        <ion-input formControlName="name" placeholder="Product Name *"></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-card>
+      <ion-item>
+        <ion-input formControlName="brand" placeholder="Product Brand *"></ion-input>
+      </ion-item>
+   </ion-card>  
+   <ion-card>
+      <ion-item>
+        <ion-input formControlName="price" placeholder="Product Price  *"></ion-input>
+      </ion-item>
+  </ion-card> 
+  <ion-card>
+    <ion-item>
+        <ion-label>RAM</ion-label>
+        <ion-select formControlName="ram" placeholder="Select One">
+          <ion-select-option value="4">4 GB</ion-select-option>
+          <ion-select-option value="8">8 GB</ion-select-option>
+          <ion-select-option value="12">12 GB</ion-select-option>
+        </ion-select>
+    </ion-item>
+  </ion-card>  
+  <ion-card>
+    <ion-item>
+        <ion-label>ROM</ion-label>
+        <ion-select formControlName="rom" placeholder="Select One">
+          <ion-select-option value="16">16 GB</ion-select-option>
+          <ion-select-option value="32">32 GB</ion-select-option>
+          <ion-select-option value="64">64 GB</ion-select-option>
+          <ion-select-option value="128">128 GB</ion-select-option>
+          <ion-select-option value="256">256 GB</ion-select-option>
+        </ion-select>
+    </ion-item>
+  </ion-card>  
+  <ion-card>
+    <ion-button (click)="onSubmit()" type="submit"  size="medium" expand="block" color="tertiary">Submit</ion-button>
+  </ion-card>
+</form>
+</ion-content>

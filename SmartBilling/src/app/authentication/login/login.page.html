@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-toolbar color=primary>
+      <ion-title >Smart Billing
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>  
+    <ion-card style="margin-top: 1cm"> 
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <ion-item>
+              <ion-card-title color="primary" >{{login}}</ion-card-title>
+              <ion-icon (click)="onClick()" *ngIf=dis  name="person-add" slot="end"></ion-icon>
+              <ion-icon (click)="onClick()" style="margin-left:auto" *ngIf=dis2  name="arrow-round-back"></ion-icon>
+          </ion-item>
+          <div *ngIf=dis>
+            <ion-card>
+              <ion-item>
+                  <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+              </ion-item>
+            </ion-card>
+            <ion-card>
+              <ion-item>
+                <ion-input type="password"  placeholder="Password" formControlName="password"></ion-input>
+              </ion-item>
+            </ion-card>
+            <ion-button type="submit"  size="small"  color="tertiary"  style="margin:auto; margin-bottom: 20px;margin-left:6cm"  padding>{{login}}</ion-button>
+          </div> 
+          <div *ngIf=dis2>
+              <ion-card>
+              <ion-item>
+                  <ion-input type="text" placeholder="Shop Name *" formControlName="name"></ion-input>
+              </ion-item>
+              </ion-card>
+              <ion-card>
+              <ion-item>
+                  <ion-input type="text" placeholder="Streat *" formControlName="streat"></ion-input>
+              </ion-item>
+              </ion-card> 
+              <ion-card>
+              <ion-item>
+                  <ion-input type="text" placeholder="City *" formControlName="city"></ion-input>
+              </ion-item>
+              </ion-card>
+              <ion-card>
+              <ion-item>
+                  <ion-input type="text" placeholder="Email" formControlName="email"></ion-input>
+              </ion-item>
+              </ion-card>
+              <ion-card>
+              <ion-item>
+                <ion-input type="password"  placeholder="Password" formControlName="password"></ion-input>
+              </ion-item>
+              </ion-card> 
+                <ion-button (click)="onRegister()"  size="small"  color="tertiary"  style="margin:auto; margin-bottom: 20px;margin-left:5cm"  padding>{{login}}</ion-button>
+            </div>  
+            <div *ngIf='!set'>
+              <label (click)="onChange()">Forget Password?</label>
+            </div>
+            <div *ngIf='set'>
+              <ion-card>
+                <ion-item>
+                    <ion-input type="text" placeholder="Enter Registerd Email" formControlName="resetEmail"></ion-input>
+                </ion-item>
+              </ion-card>
+              <ion-button (click)="onSend()"  size="small"  color="tertiary"  style="margin:auto; margin-bottom: 20px;margin-left:6cm"  padding>Reset</ion-button>
+            </div>
+    </form>
+</ion-card>
+</ion-content>

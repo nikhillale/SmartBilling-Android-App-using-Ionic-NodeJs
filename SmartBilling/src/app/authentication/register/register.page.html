@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar color=primary>
+      <ion-title >Smart Billing
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>  
+    <ion-card style="margin-top: 1cm"> 
+      <form [formGroup]="regForm">
+          <ion-item>
+              <ion-card-title color="primary" >{{login}}</ion-card-title>
+          </ion-item>
+          <div *ngIf=dis>
+              <ion-card>
+                  <ion-item>
+                      <ion-input type="text" placeholder="Enter One Time Password" formControlName="OTP"></ion-input>
+                  </ion-item>
+                </ion-card>
+                <ion-button (click)="onVerify()" size="small"  color="tertiary"  style="margin:auto; margin-bottom: 20px;margin-left:6cm"  padding>Verify</ion-button>
+          </div> 
+          <div *ngIf=dis2>
+              <ion-card>
+                  <ion-item>
+                      <ion-input type="text" placeholder="Enter New Password" formControlName="password"></ion-input>
+                  </ion-item>
+                </ion-card>
+                <ion-card>
+                  <ion-item>
+                    <ion-input type="password"  placeholder="Conformed Password" formControlName="conformPass"></ion-input>
+                  </ion-item>
+                </ion-card>
+                <ion-button (click)="onSubmit()"  size="small"  color="tertiary"  style="margin:auto; margin-bottom: 20px;margin-left:6cm"  padding>Submit</ion-button>
+          </div>  
+    </form>
+</ion-card>
+</ion-content>

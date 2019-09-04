@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-card>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-card>
+  <ion-item class="ion-no-margin">
+      <ion-icon class="ionSize " [routerLink]="['../add']"  name="add-circle-outline" padding></ion-icon><br>
+      <ion-icon class="ionSize " [routerLink]="['../invoices']"  name="logo-buffer" padding></ion-icon>
+      <ion-icon class="ionSize "  name="bulb" padding></ion-icon>
+      <ion-icon class="ionSize " [routerLink]="['../delete']" name="trash"></ion-icon>
+    </ion-item>  
+</ion-header>
+
+<ion-content >
+  <ion-card *ngFor="let item of brandNames">
+  <ion-item-sliding>
+    <ion-item *ngIf='item.brand !== name' (click)="onClick(item.brand)">
+       <ion-icon size="18" style="color: #A4C639" name="logo-android" slot='start'></ion-icon>
+      <ion-label>{{item.brand}}</ion-label>
+    </ion-item>
+
+    <ion-item *ngIf='item.brand === name'(click)="onClick(item.brand)">
+      <ion-icon size="18" style="color:#A3AAAE" name="logo-apple" slot='start'></ion-icon>
+      <ion-label>{{item.brand}}</ion-label>
+    </ion-item>
+    <ion-item-options side="end">
+      <ion-item-option color="tertiary" expandable>
+        Edit
+      </ion-item-option>
+    </ion-item-options>
+  
+  </ion-item-sliding>  
+</ion-card>  
+</ion-content>

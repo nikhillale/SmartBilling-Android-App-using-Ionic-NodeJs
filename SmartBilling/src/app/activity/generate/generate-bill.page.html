@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-card>
+<ion-toolbar>
+  <ion-buttons>
+    <ion-menu-button></ion-menu-button>
+    <ion-title>
+      Generate Invoice
+    </ion-title>
+  </ion-buttons>
+</ion-toolbar>
+</ion-card>
+</ion-header>
+
+<ion-content padding>
+ <ion-card>
+  <ion-item>
+    <ion-input [(ngModel)]="letterObj.name" placeholder="Customer Name"></ion-input>
+  </ion-item>
+</ion-card>
+<ion-card>
+  <ion-item>
+    <ion-input [(ngModel)]="letterObj.contact" placeholder="Customer Contact Number"></ion-input>
+  </ion-item>
+</ion-card> 
+<ion-card> 
+  <ion-item>
+    <ion-textarea [(ngModel)]="letterObj.email" placeholder="Customer Email" ></ion-textarea>
+  </ion-item> 
+</ion-card>
+<ion-card>  
+  <ion-item>
+      <ion-input [(ngModel)]="letterObj.address" placeholder="Customer Address" rows="5"></ion-input>
+  </ion-item>
+</ion-card> 
+
+  <ion-button  (click)="createPdf()" shape="round" expand="block" color="tertiary">Create Invoice</ion-button>
+  <ion-button  (click)="downloadPdf()" shape="round" expand="block" color="tertiary" [disabled]="!pdfObj">Send Invoice</ion-button>
+</ion-content>

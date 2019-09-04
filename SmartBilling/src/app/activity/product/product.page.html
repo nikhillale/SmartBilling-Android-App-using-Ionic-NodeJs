@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-card>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-menu-button></ion-menu-button>
+      <ion-title>
+        Product
+      </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-card>
+</ion-header>
+
+<ion-content >
+    <ion-card *ngFor="let item of product">
+    <ion-item-sliding>
+      <ion-item *ngIf='item.brand !== name' >
+        <ion-icon size="18" style="color: #A4C639" name="logo-android" slot='start' (click)="onClick(item)"></ion-icon>
+        <ion-label (click)="onClick(item)">{{item.brand}}</ion-label>
+        <ion-label (click)="onClick(item)">{{item.name}}</ion-label>
+        <ion-label><ion-icon name="options" (click)="onOptions(item)" style="margin-left:1cm"></ion-icon></ion-label>
+        <ion-icon name="switch"></ion-icon>
+      </ion-item>
+  
+      <ion-item *ngIf='item.brand === name'>
+        <ion-icon size="18" style="color:#A3AAAE" name="logo-apple" slot='start' (click)="onClick(item)"></ion-icon>
+        <ion-label (click)="onClick(item)">{{item.brand}}</ion-label>
+        <ion-label (click)="onClick(item)">{{item.name}}</ion-label>
+        <ion-label><ion-icon name="options" (click)="onOptions(item)" style="margin-left:1cm"></ion-icon></ion-label>
+        <ion-icon name="switch"></ion-icon>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="tertiary" expandable (click)="onEdit(item._id)">
+          Edit
+        </ion-item-option>
+      </ion-item-options>
+    
+    </ion-item-sliding>  
+  </ion-card>  
+  </ion-content>
